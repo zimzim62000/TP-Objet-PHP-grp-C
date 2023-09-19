@@ -5,8 +5,6 @@ namespace DevWeb\ObjetPhp;
 class Point {
 
     public function __construct(protected float $x = 0.0, protected float $y = 0.0) {
-        $this->x = $x;
-        $this->y = $y;
     }
 
     public function __toString(): string {
