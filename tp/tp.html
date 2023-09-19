@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<!-- saved from url=(0111)https://moodle.univ-artois.fr/pluginfile.php/45514/mod_resource/content/1/public/docs/td_tp/02-td-tp-php-objet/ -->
+<html itemscope="" itemtype="http://schema.org/WebPage" lang="en" class="no-js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.118.2">
+<link rel="alternate" type="application/rss+xml" href="https://moodle.univ-artois.fr/pluginfile.php/45514/mod_resource/content/1/public/docs/td_tp/02-td-tp-php-objet/index.xml">
+<meta name="robots" content="index, follow">
+
+
+<link rel="shortcut icon" href="https://moodle.univ-artois.fr/pluginfile.php/45514/mod_resource/content/1/public/favicons/favicon.ico">
+<link rel="apple-touch-icon" href="https://moodle.univ-artois.fr/pluginfile.php/45514/mod_resource/content/1/public/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="https://moodle.univ-artois.fr/pluginfile.php/45514/mod_resource/content/1/public/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="https://moodle.univ-artois.fr/pluginfile.php/45514/mod_resource/content/1/public/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="https://moodle.univ-artois.fr/pluginfile.php/45514/mod_resource/content/1/public/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="https://moodle.univ-artois.fr/pluginfile.php/45514/mod_resource/content/1/public/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="https://moodle.univ-artois.fr/pluginfile.php/45514/mod_resource/content/1/public/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="https://moodle.univ-artois.fr/pluginfile.php/45514/mod_resource/content/1/public/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="https://moodle.univ-artois.fr/pluginfile.php/45514/mod_resource/content/1/public/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="https://moodle.univ-artois.fr/pluginfile.php/45514/mod_resource/content/1/public/favicons/android-192x192.png" sizes="192x192">
+
+<title>Programmation PHP Orientée Objets | Supports R3.01 Développement Web</title>
+<meta name="description" content="">
+<meta property="og:title" content="Programmation PHP Orientée Objets">
+<meta property="og:description" content="">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://moodle.univ-artois.fr/pluginfile.php/45514/mod_resource/content/1/public/docs/td_tp/02-td-tp-php-objet/">
+<meta itemprop="name" content="Programmation PHP Orientée Objets">
+<meta itemprop="description" content=""><meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Programmation PHP Orientée Objets">
+<meta name="twitter:description" content="">
+
+
+
+
+<link rel="preload" href="./tp_files/main.min.291c723daa8f2fb6b09f56ac9a2ca71406607a4268e1fe586dddad1a8583b4e7.css" as="style">
+<link href="./tp_files/main.min.291c723daa8f2fb6b09f56ac9a2ca71406607a4268e1fe586dddad1a8583b4e7.css" rel="stylesheet" integrity="">
+
+<link href="./tp_files/supports.css" rel="stylesheet">
+<script src="./tp_files/jquery-3.6.3.min.js.téléchargement" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous"></script>
+
+
+  </head>
+  <body class="td-section">
+    <header>
+      <nav class="td-navbar navbar-dark js-navbar-scroll">
+<div class="container-fluid flex-column flex-md-row">
+  <a class="navbar-brand" href="https://moodle.univ-artois.fr/pluginfile.php/45514/mod_resource/content/1/public/"><span class="navbar-brand__logo navbar-logo"><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500" style="enable-background:new 0 0 500 500"><g><path style="fill:#fff" d="M116.8525 421.9722c-5.7041.0-10.3442-4.3127-10.3442-9.6129V88.183c0-5.3002 4.6401-9.6117 10.3442-9.6117H320.858c3.0347.0 9.3959.5498 11.7506 2.6302l.3545.3442 58.905 63.2912c2.3101 2.491 2.9202 8.4928 2.9202 11.3184v256.2039c0 5.3002-4.6407 9.6129-10.3436 9.6129H116.8525z"></path><g><g><g><path style="fill:#767676" d="M384.4445 423.2066H116.852c-6.3839.0-11.5786-4.8658-11.5786-10.8474V88.1831c0-5.9804 5.1947-10.8461 11.5786-10.8461h204.0062c.377.0 9.2786.0329 12.568 2.9389l.3947.3833 58.9508 63.337c3.2135 3.4652 3.2514 11.7924 3.2514 12.1593v256.2036C396.0231 418.3408 390.8284 423.2066 384.4445 423.2066zM116.5079 411.9189c.0848.0278.1999.0531.3441.0531h267.5925c.1442.0.2581-.0253.3441-.0531V156.1556c-.0076-.9033-.3593-3.7347-.7034-5.0037l-57.6527-61.9416c-1.4651-.3176-4.4533-.6389-5.5742-.6389H116.852c-.143.0-.2594.024-.3441.0531V411.9189zm267.4533-261.149zM327.0321 89.371v.0013V89.371z"></path></g></g></g><g><g><path style="fill:#5b7fc0" d="M189.0874 210.1754l.0012-.0012c7.7751.0012 15.0295 4.1862 18.932 10.9234 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3304-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032s-11.328-2.2733-15.458-6.4032-6.4032-9.6186-6.4056-15.4628c.0012-6.025 2.454-11.4897 6.4116-15.4473C177.5953 212.627 183.0601 210.1742 189.0874 210.1754zm7.993 21.8576c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6539 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403S197.0816 234.1722 197.0804 232.033z"></path><path style="opacity:.3;fill:#fff" d="M189.0898 210.176c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 212.6276 183.0612 210.176 189.0898 210.176zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 236.239 197.0839 234.2399 197.0839 232.0372z"></path><g><defs><path id="SVGID_1_" d="M194.7376 237.6875c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.999 7.9942-7.9942 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.0839 234.2399 196.1861 236.239 194.7376 237.6875z"></path></defs><clippath id="SVGID_2_"><use xlink:href="#SVGID_1_" style="overflow:visible"></use></clippath><path style="clip-path:url(#SVGID_2_);fill:#fff" d="M190.0704 225.0237c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 225.7247 191.9774 225.0237 190.0704 225.0237z"></path><path style="opacity:.13;clip-path:url(#SVGID_2_);fill:#020202" d="M190.0704 225.0237c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 225.7247 191.9774 225.0237 190.0704 225.0237z"></path></g><g><defs><path id="SVGID_3_" d="M189.0898 210.176c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 212.6276 183.0612 210.176 189.0898 210.176zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 236.239 197.0839 234.2399 197.0839 232.0372z"></path></defs><clippath id="SVGID_4_"><use xlink:href="#SVGID_3_" style="overflow:visible"></use></clippath><path style="clip-path:url(#SVGID_4_);fill:#5b7fc0" d="M172.6595 215.6045c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8612 12.0547.0024 21.8636-9.797 21.8613-21.8612.0024-3.8475-1.0151-7.6326-2.9353-10.9462-3.8977-6.7324-11.1497-10.9151-18.926-10.9151C182.0806 209.1953 176.6171 211.647 172.6595 215.6045z"></path></g></g><rect x="198.8952" y="225.1043" style="fill:#5b7fc0" width="122.6266" height="13.8671"></rect></g><g><path style="fill:#d95140" d="M189.0874 155.7611l.0012-.0012c7.7751.0012 15.0295 4.1862 18.932 10.9234 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3304-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032s-11.328-2.2733-15.458-6.4032-6.4032-9.6186-6.4056-15.4628c.0012-6.0249 2.454-11.4897 6.4116-15.4473C177.5953 158.2128 183.0601 155.7599 189.0874 155.7611zm7.993 21.8577c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6539 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403C196.2508 181.7667 197.0816 179.758 197.0804 177.6188z"></path><path style="opacity:.3;fill:#fff" d="M189.0898 155.7617c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 158.2134 183.0612 155.7617 189.0898 155.7617zm7.9941 21.8613c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 181.8248 197.0839 179.8256 197.0839 177.623z"></path><g><defs><path id="SVGID_5_" d="M194.7376 183.2733c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.9989 7.9942-7.9942 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.0839 179.8256 196.1861 181.8248 194.7376 183.2733z"></path></defs><clippath id="SVGID_6_"><use xlink:href="#SVGID_5_" style="overflow:visible"></use></clippath><path style="clip-path:url(#SVGID_6_);fill:#fff" d="M190.0704 170.6095c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 171.3104 191.9774 170.6095 190.0704 170.6095z"></path><path style="opacity:.13;clip-path:url(#SVGID_6_);fill:#020202" d="M190.0704 170.6095c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 171.3104 191.9774 170.6095 190.0704 170.6095z"></path></g><g><defs><path id="SVGID_7_" d="M189.0898 155.7617c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 158.2134 183.0612 155.7617 189.0898 155.7617zm7.9941 21.8613c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 181.8248 197.0839 179.8256 197.0839 177.623z"></path></defs><clippath id="SVGID_8_"><use xlink:href="#SVGID_7_" style="overflow:visible"></use></clippath><path style="clip-path:url(#SVGID_8_);fill:#d95140" d="M172.6595 161.1903c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8613 12.0547.0024 21.8636-9.797 21.8613-21.8613.0024-3.8474-1.0151-7.6326-2.9353-10.9462-3.8977-6.7324-11.1497-10.9151-18.926-10.9151C182.0806 154.7811 176.6171 157.2327 172.6595 161.1903z"></path></g><rect x="198.8952" y="170.69" style="fill:#d95140" width="122.6266" height="13.8671"></rect></g><g><g><path style="fill:#56a55c" d="M189.5379 264.6147l.0012-.0012c7.7751.0012 15.0294 4.1862 18.932 10.9235 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3304-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032-5.8394.0-11.3281-2.2733-15.458-6.4032-4.13-4.13-6.4032-9.6186-6.4056-15.4628.0012-6.0249 2.454-11.4897 6.4116-15.4472C178.0458 267.0663 183.5105 264.6135 189.5379 264.6147zm7.993 21.8576c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6538 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403C196.7013 290.6202 197.5321 288.6115 197.5309 286.4723z"></path><path style="opacity:.3;fill:#fff" d="M189.5403 264.6153c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8065-21.8612-21.8613.0-6.0285 2.4516-11.492 6.4116-15.452C178.0482 267.0669 183.5117 264.6153 189.5403 264.6153zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.6366 290.6783 197.5344 288.6792 197.5344 286.4765z"></path><g><defs><path id="SVGID_9_" d="M195.1881 292.1268c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.9989 7.9942-7.9941 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.5344 288.6792 196.6366 290.6783 195.1881 292.1268z"></path></defs><clippath id="SVGID_10_"><use xlink:href="#SVGID_9_" style="overflow:visible"></use></clippath><path style="clip-path:url(#SVGID_10_);fill:#fff" d="M190.5209 279.463c-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7446-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9941 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C194.239 280.164 192.4279 279.463 190.5209 279.463z"></path><path style="opacity:.13;clip-path:url(#SVGID_10_);fill:#020202" d="M190.5209 279.463c-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7446-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9941 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C194.239 280.164 192.4279 279.463 190.5209 279.463z"></path></g><g><defs><path id="SVGID_11_" d="M189.5403 264.6153c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8065-21.8612-21.8613.0-6.0285 2.4516-11.492 6.4116-15.452C178.0482 267.0669 183.5117 264.6153 189.5403 264.6153zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.6366 290.6783 197.5344 288.6792 197.5344 286.4765z"></path></defs><clippath id="SVGID_12_"><use xlink:href="#SVGID_11_" style="overflow:visible"></use></clippath><path style="clip-path:url(#SVGID_12_);fill:#56a55c" d="M173.11 270.0439c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8613 12.0547.0024 21.8636-9.797 21.8613-21.8613.0024-3.8474-1.0151-7.6326-2.9353-10.9462-3.8977-6.7325-11.1497-10.9151-18.926-10.9151C182.5311 263.6346 177.0676 266.0863 173.11 270.0439z"></path></g></g><rect x="199.3456" y="279.5436" style="fill:#56a55c" width="122.6266" height="13.8671"></rect></g><g><g><path style="fill:#f1bc42" d="M189.0874 318.7208l.0012-.0012c7.7751.0012 15.0295 4.1862 18.932 10.9234 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3305-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032s-11.328-2.2733-15.458-6.4032-6.4032-9.6186-6.4056-15.4628c.0012-6.025 2.454-11.4897 6.4116-15.4472C177.5953 321.1724 183.0601 318.7196 189.0874 318.7208zm7.993 21.8576c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6539 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403S197.0816 342.7176 197.0804 340.5784z"></path><path style="opacity:.3;fill:#fff" d="M189.0898 318.7214c7.7763.0 15.0283 4.1826 18.926 10.915 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8612-12.0547.0024-21.8636-9.8065-21.8612-21.8612.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 321.173 183.0612 318.7214 189.0898 318.7214zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 344.7844 197.0839 342.7853 197.0839 340.5826z"></path><g><defs><path id="SVGID_13_" d="M194.7376 346.2329c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.999 7.9942-7.9942 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.0839 342.7853 196.1861 344.7844 194.7376 346.2329z"></path></defs><clippath id="SVGID_14_"><use xlink:href="#SVGID_13_" style="overflow:visible"></use></clippath><path style="clip-path:url(#SVGID_14_);fill:#fff" d="M190.0704 333.5691c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0834 6.1218 2.8788C193.7885 334.2701 191.9774 333.5691 190.0704 333.5691z"></path><path style="opacity:.13;clip-path:url(#SVGID_14_);fill:#020202" d="M190.0704 333.5691c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0834 6.1218 2.8788C193.7885 334.2701 191.9774 333.5691 190.0704 333.5691z"></path></g><g><defs><path id="SVGID_15_" d="M189.0898 318.7214c7.7763.0 15.0283 4.1826 18.926 10.915 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8612-12.0547.0024-21.8636-9.8065-21.8612-21.8612.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 321.173 183.0612 318.7214 189.0898 318.7214zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 344.7844 197.0839 342.7853 197.0839 340.5826z"></path></defs><clippath id="SVGID_16_"><use xlink:href="#SVGID_15_" style="overflow:visible"></use></clippath><path style="clip-path:url(#SVGID_16_);fill:#f1bc42" d="M172.6595 324.15c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8612 12.0547.0024 21.8636-9.797 21.8613-21.8612.0024-3.8474-1.0151-7.6327-2.9353-10.9462-3.8977-6.7324-11.1497-10.9151-18.926-10.9151C182.0806 317.7407 176.6171 320.1924 172.6595 324.15z"></path></g></g><rect x="198.8952" y="333.6497" style="fill:#f1bc42" width="122.6266" height="13.8671"></rect></g></g></svg></span><span class="navbar-brand__name">Supports R3.01 Développement Web</span></a>
+  <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="https://moodle.univ-artois.fr/pluginfile.php/45514/mod_resource/content/1/public/docs/intervenants/"><span>Intervenants</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://moodle.univ-artois.fr/pluginfile.php/45514/mod_resource/content/1/public/docs/cours/"><span>Cours</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="https://moodle.univ-artois.fr/pluginfile.php/45514/mod_resource/content/1/public/docs/td_tp/"><span>TD/TP</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://moodle.univ-artois.fr/pluginfile.php/45514/mod_resource/content/1/public/docs/td_git/"><span>Rappels git</span></a>
+      </li>
+      </ul>
+  </div>
+  <div class="d-none d-lg-block">
+    
+  </div>
+</div>
+</nav>
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+            <div id="td-sidebar-menu" class="td-sidebar__inner">
+  <form class="td-sidebar__search d-flex align-items-center">
+    
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ms-3 fas fa-bars" type="button" data-bs-toggle="collapse" data-bs-target="#td-section-nav" aria-controls="td-section-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    </button>
+  </form>
+  <nav class="collapse td-sidebar-nav" id="td-section-nav">
+    <ul class="td-sidebar-nav__section pe-md-3 ul-0">
+      <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docs-li">
+  <a href="https://moodle.univ-artois.fr/pluginfile.php/45514/mod_resource/content/1/public/docs/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-docs"><span class="">Supports Développement Web</span></a>
+  <ul class="ul-1">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscours-li">
+  <a href="https://moodle.univ-artois.fr/pluginfile.php/45514/mod_resource/content/1/public/docs/cours/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docscours"><span class="">Cours</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsintervenants-li">
+  <a href="https://moodle.univ-artois.fr/pluginfile.php/45514/mod_resource/content/1/public/docs/intervenants/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsintervenants"><span class="">Intervenants</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docstd_git-li">
+  <a href="https://moodle.univ-artois.fr/pluginfile.php/45514/mod_resource/content/1/public/docs/td_git/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docstd_git"><span class="">Rappels git</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docstd_tp-li">
+  <a href="https://moodle.univ-artois.fr/pluginfile.php/45514/mod_resource/content/1/public/docs/td_tp/" title="Travaux Pratiques" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docstd_tp"><span class="">TD/TP</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docstd_tp00-td-tp-installation-li">
+  <a href="https://moodle.univ-artois.fr/pluginfile.php/45514/mod_resource/content/1/public/docs/td_tp/00-td-tp-installation/" title="Création d&#39;un environnement de développement" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docstd_tp00-td-tp-installation"><span class="">Création environnement</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docstd_tp00-td-tp-installationobtenir_licence_jetbrains-li">
+  <a href="https://moodle.univ-artois.fr/pluginfile.php/45514/mod_resource/content/1/public/docs/td_tp/00-td-tp-installation/obtenir_licence_jetbrains/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-docstd_tp00-td-tp-installationobtenir_licence_jetbrains"><span class="">Licence gratuite JetBrains</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docstd_tp00-td-tp-installationtd-tp-git-li">
+  <a href="https://moodle.univ-artois.fr/pluginfile.php/45514/mod_resource/content/1/public/docs/td_tp/00-td-tp-installation/td-tp-git/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-docstd_tp00-td-tp-installationtd-tp-git"><span class="">TP Utilisation git</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docstd_tp01-td-tp-php-base-li">
+  <a href="https://moodle.univ-artois.fr/pluginfile.php/45514/mod_resource/content/1/public/docs/td_tp/01-td-tp-php-base/" title="Découverte et manipulation de la syntaxe de base PHP" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docstd_tp01-td-tp-php-base"><span class="">Syntaxe de base PHP</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docstd_tp02-td-tp-git-fork-li">
+  <a href="https://moodle.univ-artois.fr/pluginfile.php/45514/mod_resource/content/1/public/docs/td_tp/02-td-tp-git-fork/" title="Manipulation de travail sous GIT pour vos TP" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docstd_tp02-td-tp-git-fork"><span class="">Utilisation forge</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-docstd_tp02-td-tp-php-objet-li">
+  <a href="https://moodle.univ-artois.fr/pluginfile.php/45514/mod_resource/content/1/public/docs/td_tp/02-td-tp-php-objet/" title="Programmation PHP Orientée Objets" class="align-left ps-0 active td-sidebar-link td-sidebar-link__section" id="m-docstd_tp02-td-tp-php-objet"><span class="td-sidebar-nav-active-item">PHP Orientée Objets</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docstd_tp03-td-tp-php-web-li">
+  <a href="https://moodle.univ-artois.fr/pluginfile.php/45514/mod_resource/content/1/public/docs/td_tp/03-td-tp-php-web/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docstd_tp03-td-tp-php-web"><span class="">Première application web</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docstd_tp04-td-tp-laravel-intro-li">
+  <a href="https://moodle.univ-artois.fr/pluginfile.php/45514/mod_resource/content/1/public/docs/td_tp/04-td-tp-laravel-intro/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docstd_tp04-td-tp-laravel-intro"><span class="">Introduction Laravel</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docstd_tp05-td-tp-laravel-routage-li">
+  <a href="https://moodle.univ-artois.fr/pluginfile.php/45514/mod_resource/content/1/public/docs/td_tp/05-td-tp-laravel-routage/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docstd_tp05-td-tp-laravel-routage"><span class="">Routage CRUD Laravel</span></a>
+</li>
+  </ul>
+</li>
+  </ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+          </aside>
+          <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
+            
+<div class="td-page-meta ms-2 pb-1 pt-2 mb-0">
+
+</div>
+
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="https://moodle.univ-artois.fr/pluginfile.php/45514/mod_resource/content/1/public/docs/td_tp/02-td-tp-php-objet/#objectifs">Objectifs</a></li>
+    <li><a href="https://moodle.univ-artois.fr/pluginfile.php/45514/mod_resource/content/1/public/docs/td_tp/02-td-tp-php-objet/#cr%C3%A9ation-dun-nouveau-projet">Création d’un nouveau projet</a></li>
+    <li><a href="https://moodle.univ-artois.fr/pluginfile.php/45514/mod_resource/content/1/public/docs/td_tp/02-td-tp-php-objet/#premi%C3%A8res-classes">Premières classes</a>
+      <ul>
+        <li><a href="https://moodle.univ-artois.fr/pluginfile.php/45514/mod_resource/content/1/public/docs/td_tp/02-td-tp-php-objet/#la-classe-parall%C3%A9l%C3%A9pip%C3%A8de-">La classe parallélépipède …</a></li>
+        <li><a href="https://moodle.univ-artois.fr/pluginfile.php/45514/mod_resource/content/1/public/docs/td_tp/02-td-tp-php-objet/#cr%C3%A9ation-dune-interface-drawable">Création d’une interface <code>Drawable</code></a></li>
+        <li><a href="https://moodle.univ-artois.fr/pluginfile.php/45514/mod_resource/content/1/public/docs/td_tp/02-td-tp-php-objet/#la-classe-employ%C3%A9-et-ses-d%C3%A9riv%C3%A9es">La classe Employé et ses dérivées</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    
+            <div class="taxonomy taxonomy-terms-cloud taxo-tags">
+      <h5 class="taxonomy-title">Tags</h5>
+      <ul class="taxonomy-terms">
+        <li><a class="taxonomy-term" href="https://moodle.univ-artois.fr/pluginfile.php/45514/mod_resource/content/1/public/tags/laravel/" data-taxonomy-term="laravel"><span class="taxonomy-label">Laravel</span><span class="taxonomy-count">2</span></a></li>
+        <li><a class="taxonomy-term" href="https://moodle.univ-artois.fr/pluginfile.php/45514/mod_resource/content/1/public/tags/php/" data-taxonomy-term="php"><span class="taxonomy-label">PHP</span><span class="taxonomy-count">5</span></a></li>
+        <li><a class="taxonomy-term" href="https://moodle.univ-artois.fr/pluginfile.php/45514/mod_resource/content/1/public/tags/tp/" data-taxonomy-term="tp"><span class="taxonomy-label">TP</span><span class="taxonomy-count">7</span></a></li>
+        </ul>
+    </div>
+  
+	
+          </aside>
+          <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">
+            
+  
+
+            <nav aria-label="breadcrumb" class="td-breadcrumbs">
+  <ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <a href="https://moodle.univ-artois.fr/pluginfile.php/45514/mod_resource/content/1/public/docs/">Supports Développement Web</a></li>
+  <li class="breadcrumb-item">
+    <a href="https://moodle.univ-artois.fr/pluginfile.php/45514/mod_resource/content/1/public/docs/td_tp/">TD/TP</a></li>
+  <li class="breadcrumb-item active" aria-current="page">
+    PHP Orientée Objets</li>
+  </ol>
+</nav>
+            
+<div class="td-content">
+	<h1>Programmation PHP Orientée Objets</h1>
+  
+	<header class="article-meta">
+		<div class="taxonomy taxonomy-terms-article taxo-tags">
+  <h5 class="taxonomy-title">Tags:</h5>
+  <ul class="taxonomy-terms">
+    <li><a class="taxonomy-term" href="https://moodle.univ-artois.fr/pluginfile.php/45514/mod_resource/content/1/public/tags/php/" data-taxonomy-term="php"><span class="taxonomy-label">PHP</span></a></li>
+    <li><a class="taxonomy-term" href="https://moodle.univ-artois.fr/pluginfile.php/45514/mod_resource/content/1/public/tags/tp/" data-taxonomy-term="tp"><span class="taxonomy-label">TP</span></a></li>
+    </ul>
+</div>
+
+  </header>
+	<h2 id="objectifs">Objectifs<a aria-hidden="true" href="https://moodle.univ-artois.fr/pluginfile.php/45514/mod_resource/content/1/public/docs/td_tp/02-td-tp-php-objet/#objectifs" style="visibility: hidden;"> <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"></path><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path></svg></a></h2>
+<ul>
+<li>Utilisation des concepts Orientés Objets en PHP.</li>
+<li>Utilisation de la commande <code>composer</code> pour créer un projet PHP.</li>
+<li>Introduction de la notion de <code>namespace</code> en PHP.</li>
+<li>Utilisation d’un environnement de tests : <code>phpunit</code>.</li>
+</ul>
+<h2 id="création-dun-nouveau-projet">Création d’un nouveau projet<a aria-hidden="true" href="https://moodle.univ-artois.fr/pluginfile.php/45514/mod_resource/content/1/public/docs/td_tp/02-td-tp-php-objet/#cr%C3%A9ation-dun-nouveau-projet" style="visibility: hidden;"> <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"></path><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path></svg></a></h2>
+<p>Dans le TP <a href="https://moodle.univ-artois.fr/pluginfile.php/45514/mod_resource/content/1/public/docs/td_tp/00-td-tp-installation/">Création d’un environnement de développement</a> vous avez découvert
+l’arborescence d’un projet web de base avec la possibilité de mettre en place des tests unitaires.
+Nous allons repartir de cette arborescence pour ce TP.</p>
+<p>Dans ce TP nous allons utiliser une nouvelle fois le mode de développement TDD (<em>Test-driven development</em>).
+Cela signifie que nous allons définir un objectif à atteindre et développer le code qui permet de l’atteindre.</p>
+<p>Pour vous initier à l’utilisation d’un projet déjà existant disponible dans un dépôt git et que vous devez améliorer,
+vous allez faire un fork (divergence).</p>
+<p>Le projet à récupérer est celon votre groupe :</p>
+<ul>
+<li>Groupe A : <a href="https://gitlab.univ-artois.fr/r3.01-dev-web/annee-23-24/code-seance/tp-objet-php-grp-a">TP Objet PHP grp A</a></li>
+<li>Groupe B : <a href="https://gitlab.univ-artois.fr/r3.01-dev-web/annee-23-24/code-seance/tp-objet-php-grp-b">TP Objet PHP grp B</a></li>
+<li>Groupe C : <a href="https://gitlab.univ-artois.fr/r3.01-dev-web/annee-23-24/code-seance/tp-objet-php-grp-c">TP Objet PHP grp C</a></li>
+</ul>
+<p>Quand vous aurez terminé le TP, vous proposerez une “<em>Merge Request</em>” vers le projet de départ.
+Le développeur propose son code à l’aide de cette technique à un chef de projet qui valide les propositions ou demande des modifications.
+Ce mode de fonctionnement est proche de celui que vous rencontrerez dans les entreprises.</p>
+<div class="exercice">
+    <div class="exercice-titre">  </div>
+<div class="exercice-enonce">
+    <p>Nous allons créer un nouveau projet <code>tp-objet-php</code> dans lequel nous allons mettre en oeuvre la syntaxe PHP.</p>
+</div>
+</div>
+<div class="exercice-question">
+    <div class="exercice-question-titre"></div>
+<ol>
+<li>Créez une divergence du projet TP Objet PHP disponible sur gitlab.</li>
+<li>Clonez le projet dans votre environnement de travail.</li>
+<li>Récupérez les dépendances du projet.</li>
+</ol>
+</div>
+
+
+<div class="alert alert-warning" role="alert">
+<h4 class="alert-heading">Attention</h4>
+
+    <p>Il faut prendre l’habitude de suivre cette consigne :</p>
+<p><strong>1 question = 1 commit</strong></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>    git add .
+</span></span><span style="display:flex;"><span>    git commit -am <span style="color:#4e9a06">"réponse à la question XXX"</span>
+</span></span></code></pre></div><p>Et faire une sauvegarde dans votre dépôt gitlab à la fin de la séance.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>    git push origin main
+</span></span></code></pre></div>
+
+</div>
+
+<h2 id="premières-classes">Premières classes<a aria-hidden="true" href="https://moodle.univ-artois.fr/pluginfile.php/45514/mod_resource/content/1/public/docs/td_tp/02-td-tp-php-objet/#premi%C3%A8res-classes" style="visibility: hidden;"> <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"></path><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path></svg></a></h2>
+<h3 id="la-classe-parallélépipède-">La classe parallélépipède …<a aria-hidden="true" href="https://moodle.univ-artois.fr/pluginfile.php/45514/mod_resource/content/1/public/docs/td_tp/02-td-tp-php-objet/#la-classe-parall%C3%A9l%C3%A9pip%C3%A8de-" style="visibility: hidden;"> <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"></path><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path></svg></a></h3>
+<div class="exercice">
+    <div class="exercice-titre">  </div>
+<div class="exercice-enonce">
+    <p>Nous allons créer un ensemble de classes qui collaborent.</p>
+</div>
+</div>
+<h5 id="création-de-la-classe-point">Création de la classe <code>Point</code><a aria-hidden="true" href="https://moodle.univ-artois.fr/pluginfile.php/45514/mod_resource/content/1/public/docs/td_tp/02-td-tp-php-objet/#cr%C3%A9ation-de-la-classe-point" style="visibility: hidden;"> <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"></path><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path></svg></a></h5>
+<p>Nous allons créer une classe <code>Point</code> qui a deux propriétés $x et $y de type float. Ces propriétés sont <code>protected</code>.</p>
+
+
+<div class="alert alert-warning" role="alert">
+<h4 class="alert-heading">Attention</h4>
+
+    <p>Nous allons suivre la règle utilisée en java, qui place le code d’une seule classe publique dans un fichier.
+Le nom du fichier correspond au nom de la classe.
+Cette règle permet d’utiliser un mécanisme de recherche et de chargement automatique des classes de notre application qui est utilisé dans le script <code>vendor/autoload.php</code> généré par la commande <code>composer</code>.</p>
+<p>Dans votre fichier <code>composer.json</code>, vous devez indiquer un nom de package dans le fichier.
+Si vous avez indiqué <code>TpWeb/ObjetPhp</code> alors vous devez ajouter la ligne :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">namespace</span> <span style="color:#000">TpWeb\ObjetPhp</span><span style="color:#000;font-weight:bold">;</span>
+</span></span></code></pre></div><p>Cela donne à la création de la classe <code>Point</code> dans le fichier <code>src/Point.php</code> de votre projet :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">&lt;?</span><span style="color:#000">php</span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"> * Contenu du fichier Point.php
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"> */</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">namespace</span> <span style="color:#000">TpWeb\ObjetPhp</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">Point</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div>
+
+</div>
+
+<div class="exercice-question">
+    <div class="exercice-question-titre"></div>
+<ol>
+<li>Créez un fichier de tests <code>PointTest.php</code>.</li>
+</ol>
+</div>
+<p>La classe <code>Point</code>  doit contenir</p>
+<ul>
+<li>deux attributs <code>protected</code> <code>x</code> et <code>y</code> de type <code>float</code>,</li>
+<li>une fonction constructeur avec deux paramètres qui initialise par défaut <code>$x</code> et <code>$y</code> à la valeur 0.</li>
+<li>une fonction __toString() qui renvoie une instance de la classe <code>Point</code> au format <em>string</em> :
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Point ( 0.00,  0.00) &lt;-- les coordonnées x et y sont affichés à l'aide de 5 caractères (%5.2f)
+</span></span><span style="display:flex;"><span>Point (10.52, 20.13)
+</span></span></code></pre></div></li>
+<li>Les fonctions assesseurs des attributs <code>$x</code> et <code>$y</code> (fonctions <code>getXXX</code> et <code>setXXX</code> avec <code>XXX</code> le nom de l’attribut.
+(vous avez utilisé la même chose en java);</li>
+</ul>
+<div class="code">
+    <button class="accordeon active"> Code des fonctions de test de la classe Point  <i class="fas fa-angle-down"></i></button>
+    <div class="panel" style="display: block;">
+        
+
+<div class="code-contenu">
+    <h5 class="issue-description-titre">  </h5>
+    <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     * @test
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     * @testdox Déclaration des attributs x et y
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">function</span> <span style="color:#000">test_attributs_x_et_y</span><span style="color:#000;font-weight:bold">()</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertClassHasAttribute</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">'x'</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">Point</span><span style="color:#ce5c00;font-weight:bold">::</span><span style="color:#c4a000">class</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertClassHasAttribute</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">'y'</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">Point</span><span style="color:#ce5c00;font-weight:bold">::</span><span style="color:#c4a000">class</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     * @test
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     * @testdox Test classe Point
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">function</span> <span style="color:#000">test_point</span><span style="color:#000;font-weight:bold">()</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$p</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">Point</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertInstanceOf</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">Point</span><span style="color:#ce5c00;font-weight:bold">::</span><span style="color:#c4a000">class</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">$p</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div>
+</div>
+
+
+
+    </div>
+</div>
+
+<div class="exercice-question">
+    <div class="exercice-question-titre"></div>
+<ol>
+<li>Écrire le code PHP de la classe <code>Point</code> qui sera stockée dans le fichier <code>Point.php</code> qui contient deux attributs <code>protected</code> <code>$x</code> et <code>$y</code> de type <code>float</code>.</li>
+<li>Ajouter le code de la fonction <code>constructeur</code> qui admet deux paramètres qui initialisent par défaut l’instance avec les valeurs <code>(0,0)</code> pour <code>(x,y)</code>.</li>
+<li>Ajouter le code de la fonction  <code>__toString</code> qui donne une représentation de l’instance sous forme d’une <code>string</code>.</li>
+<li>Ajouter le code des fonctions <em>accesseurs</em> pour <code>$x</code> et <code>$y</code>.</li>
+</ol>
+</div>
+<h5 id="création-de-la-classe-figure">Création de la classe <code>Figure</code><a aria-hidden="true" href="https://moodle.univ-artois.fr/pluginfile.php/45514/mod_resource/content/1/public/docs/td_tp/02-td-tp-php-objet/#cr%C3%A9ation-de-la-classe-figure" style="visibility: hidden;"> <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"></path><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path></svg></a></h5>
+<p>Nous allons créer une classe <code>Figure</code> qui utilise la classe <code>Point</code> pour fixer le coin supérieur gauche de la figure qui sera un attribut <em>protected</em> <code>$origine</code>.</p>
+<div class="exercice-question">
+    <div class="exercice-question-titre"></div>
+<ol>
+<li>Créez un fichier de tests <code>FigureTest.php</code>.</li>
+</ol>
+</div>
+<p>La classe <code>Figure</code> contient :</p>
+<ul>
+<li>une fonction <em>constructeur</em> avec un paramètre <code>$origine</code> de type <code>Point</code>.
+Par défaut, si le paramètre n’est pas donné, les coordonnées par défaut du point seront <code>(0.0,0.0)</code>.</li>
+<li>une fonction <code>__toString</code> qui donne une représentation de l’instance sous forme d’une <code>string</code>.
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Figure : origine : Point (10.52, 20.13)
+</span></span></code></pre></div></li>
+<li>Les fonctions assesseurs de l’attribut <code>$origine</code>.
+Si le paramètre de la fonction <code>setOrigine</code> est null alors le point aura comme coordonnées <code>(0.0,0.0)</code>.</li>
+</ul>
+<div class="code">
+    <button class="accordeon"> Code des fonctions de test de la classe Figure  <i class="fas fa-angle-right"></i></button>
+    <div class="panel">
+        
+
+<div class="code-contenu">
+    <h5 class="issue-description-titre">  </h5>
+    <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     * @test
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     * @testdox Déclaration de l'attribut origine
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">function</span> <span style="color:#000">test_attributs_x_et_y</span><span style="color:#000;font-weight:bold">()</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertClassHasAttribute</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">'origine'</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">Figure</span><span style="color:#ce5c00;font-weight:bold">::</span><span style="color:#c4a000">class</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     * @test
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     * @testdox Test classe Figure
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">function</span> <span style="color:#000">test_class_figure</span><span style="color:#000;font-weight:bold">()</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$f</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">Figure</span><span style="color:#000;font-weight:bold">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertInstanceOf</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">Figure</span><span style="color:#ce5c00;font-weight:bold">::</span><span style="color:#c4a000">class</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">$f</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     * @test
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     * @testdox Test toString Figure
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">function</span> <span style="color:#000">test_toString_figure</span><span style="color:#000;font-weight:bold">()</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$f</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">Figure</span><span style="color:#000;font-weight:bold">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">'Figure : origine : Point ( 0.00,  0.00)'</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">""</span> <span style="color:#ce5c00;font-weight:bold">.</span> <span style="color:#000">$f</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$f</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">Figure</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">Point</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">10.52</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">20.13</span><span style="color:#000;font-weight:bold">));</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">'Figure : origine : Point (10.52, 20.13)'</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">""</span> <span style="color:#ce5c00;font-weight:bold">.</span> <span style="color:#000">$f</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     * @test
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     * @testdox Test getOrigine Figure
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">function</span> <span style="color:#000">test_get_Origine</span><span style="color:#000;font-weight:bold">()</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$f</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">Figure</span><span style="color:#000;font-weight:bold">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$p</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">Point</span><span style="color:#000;font-weight:bold">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">""</span> <span style="color:#ce5c00;font-weight:bold">.</span> <span style="color:#000">$p</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">""</span> <span style="color:#ce5c00;font-weight:bold">.</span> <span style="color:#000">$f</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">getOrigine</span><span style="color:#000;font-weight:bold">());</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$p</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">Point</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">10.52</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">20.13</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$f</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">Figure</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$p</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">""</span> <span style="color:#ce5c00;font-weight:bold">.</span> <span style="color:#000">$p</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">""</span> <span style="color:#ce5c00;font-weight:bold">.</span> <span style="color:#000">$f</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">getOrigine</span><span style="color:#000;font-weight:bold">());</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     * @test
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     * @testdox Test setOrigine Figure
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">function</span> <span style="color:#000">test_set_Origine</span><span style="color:#000;font-weight:bold">()</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$f</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">Figure</span><span style="color:#000;font-weight:bold">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$p</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">Point</span><span style="color:#000;font-weight:bold">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$f</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">setOrigine</span><span style="color:#000;font-weight:bold">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">""</span> <span style="color:#ce5c00;font-weight:bold">.</span> <span style="color:#000">$p</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">""</span> <span style="color:#ce5c00;font-weight:bold">.</span> <span style="color:#000">$f</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">getOrigine</span><span style="color:#000;font-weight:bold">());</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$p</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">Point</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">10.52</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">20.13</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$f</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">setOrigine</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$p</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">""</span> <span style="color:#ce5c00;font-weight:bold">.</span> <span style="color:#000">$p</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">""</span> <span style="color:#ce5c00;font-weight:bold">.</span> <span style="color:#000">$f</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">getOrigine</span><span style="color:#000;font-weight:bold">());</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div>
+</div>
+
+
+
+    </div>
+</div>
+
+<div class="exercice-question">
+    <div class="exercice-question-titre"></div>
+<ol>
+<li>Écrire le code PHP de la classe <code>Figure</code> qui sera stockée dans le fichier <code>Figure.php</code> qui contient l’attribut <code>protected</code> <code>$origine</code> de type <code>Point</code>.</li>
+<li>Ajouter le code de la fonction <code>constructeur</code> qui admet un paramètre avec par défaut une origine en <code>(0.0,0.0)</code>.</li>
+<li>Ajouter le code de la fonction  <code>__toString</code>.</li>
+<li>Ajouter le code des fonctions <em>accesseurs</em> pour <code>$origine</code>.</li>
+</ol>
+</div>
+<h5 id="création-de-la-classe-rectangle">Création de la classe <code>Rectangle</code><a aria-hidden="true" href="https://moodle.univ-artois.fr/pluginfile.php/45514/mod_resource/content/1/public/docs/td_tp/02-td-tp-php-objet/#cr%C3%A9ation-de-la-classe-rectangle" style="visibility: hidden;"> <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"></path><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path></svg></a></h5>
+<p>Nous allons créer une classe <code>Rectangle</code> qui hérite de la classe <code>Figure</code> et qui sera stockée dans le fichier <code>Rectangle.php</code> qui contient deux propriétés <code>$longueur</code> et <code>$largeur</code> de type <code>float</code>.</p>
+<div class="exercice-question">
+    <div class="exercice-question-titre"></div>
+<ol>
+<li>Créez un fichier de tests <code>RectangleTest.php</code>.</li>
+</ol>
+</div>
+<p>La classe <code>Rectangle</code> contient :</p>
+<ul>
+<li>Une fonction <em>constructeur</em> avec 3 paramètres <code>$largeur</code> de type <code>float</code> ,<code>$longueur</code> de type <code>float</code> et <code>$origine</code> de type <code>Point</code> et qui utilise le constructeur de la classe <code>Figure</code>.
+Si les paramètres ne sont pas spécifiés à l’appel, ils prendront par défaut pour  <code>$largeur</code> la valeur <code>0.0</code>, <code>$longueur</code>  la valeur <code>0.0</code> et  <code>$origine</code> la valeur <code>(0.0,0.0)</code>.</li>
+<li>Une fonction <code>__toString</code> qui donne une représentation de l’instance sous forme d’une <code>string</code>.
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Rectangle : origine : Point (10.52, 20.13), largeur : 20.00, longueur : 10.00
+</span></span></code></pre></div></li>
+<li>Les fonctions assesseurs des attributs <code>$largeur</code> et <code>$longueur</code>.
+Si le paramètre de la fonction <code>setXXX</code> est null alors la valeur 0.0 est utilisée par défaut.</li>
+<li>Une fonction <code>aire()</code> qui renvoie la valeur de l’aire du rectangle.</li>
+</ul>
+<div class="code">
+    <button class="accordeon"> Code des fonctions de test de la classe Rectangle  <i class="fas fa-angle-right"></i></button>
+    <div class="panel">
+        
+
+<div class="code-contenu">
+    <h5 class="issue-description-titre">  </h5>
+    <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     * @test
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     * @testdox Déclaration des attributs dans la classe Rectangle
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">function</span> <span style="color:#000">test_attributs_Rectangle_x_et_y</span><span style="color:#000;font-weight:bold">()</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertClassHasAttribute</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">'origine'</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">Rectangle</span><span style="color:#ce5c00;font-weight:bold">::</span><span style="color:#c4a000">class</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertClassHasAttribute</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">'largeur'</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">Rectangle</span><span style="color:#ce5c00;font-weight:bold">::</span><span style="color:#c4a000">class</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertClassHasAttribute</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">'longueur'</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">Rectangle</span><span style="color:#ce5c00;font-weight:bold">::</span><span style="color:#c4a000">class</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     * @test
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     * @testdox Test class Rectangle
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">function</span> <span style="color:#000">test_Rectangle</span><span style="color:#000;font-weight:bold">()</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$r</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">Rectangle</span><span style="color:#000;font-weight:bold">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertInstanceOf</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">Rectangle</span><span style="color:#ce5c00;font-weight:bold">::</span><span style="color:#c4a000">class</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">$r</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     * @test
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     * @testdox Test toString Rectangle
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">function</span> <span style="color:#000">test_toString_rectangle</span><span style="color:#000;font-weight:bold">()</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$r</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">Rectangle</span><span style="color:#000;font-weight:bold">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">'Rectangle : origine : Point ( 0.00,  0.00), largeur :  0.00, longueur :  0.00'</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">""</span> <span style="color:#ce5c00;font-weight:bold">.</span> <span style="color:#000">$r</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$r</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">Rectangle</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">20</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">10</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">Point</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">10.52</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">20.13</span><span style="color:#000;font-weight:bold">));</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">'Rectangle : origine : Point (10.52, 20.13), largeur : 20.00, longueur : 10.00'</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">""</span> <span style="color:#ce5c00;font-weight:bold">.</span> <span style="color:#000">$r</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     * @test
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     * @testdox Test getXXX Rectangle
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">function</span> <span style="color:#000">test_get_rectangle</span><span style="color:#000;font-weight:bold">()</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$r</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">Rectangle</span><span style="color:#000;font-weight:bold">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$p</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">Point</span><span style="color:#000;font-weight:bold">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">""</span> <span style="color:#ce5c00;font-weight:bold">.</span> <span style="color:#000">$p</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">""</span> <span style="color:#ce5c00;font-weight:bold">.</span> <span style="color:#000">$r</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">getOrigine</span><span style="color:#000;font-weight:bold">());</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">0.0</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">""</span> <span style="color:#ce5c00;font-weight:bold">.</span> <span style="color:#000">$r</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">getLongueur</span><span style="color:#000;font-weight:bold">());</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">0.0</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">""</span> <span style="color:#ce5c00;font-weight:bold">.</span> <span style="color:#000">$r</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">getLargeur</span><span style="color:#000;font-weight:bold">());</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$p</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">Point</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">10.52</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">20.13</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$r</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">Rectangle</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">20</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">10</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">$p</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">""</span> <span style="color:#ce5c00;font-weight:bold">.</span> <span style="color:#000">$p</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">""</span> <span style="color:#ce5c00;font-weight:bold">.</span> <span style="color:#000">$r</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">getOrigine</span><span style="color:#000;font-weight:bold">());</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">10.0</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">""</span> <span style="color:#ce5c00;font-weight:bold">.</span> <span style="color:#000">$r</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">getLongueur</span><span style="color:#000;font-weight:bold">());</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">20.0</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">""</span> <span style="color:#ce5c00;font-weight:bold">.</span> <span style="color:#000">$r</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">getLargeur</span><span style="color:#000;font-weight:bold">());</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     * @test
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     * @testdox Test setXXX Rectangle
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">function</span> <span style="color:#000">test_set_rectangle</span><span style="color:#000;font-weight:bold">()</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$r</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">Rectangle</span><span style="color:#000;font-weight:bold">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$p</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">Point</span><span style="color:#000;font-weight:bold">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$r</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">setOrigine</span><span style="color:#000;font-weight:bold">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">""</span> <span style="color:#ce5c00;font-weight:bold">.</span> <span style="color:#000">$p</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">""</span> <span style="color:#ce5c00;font-weight:bold">.</span> <span style="color:#000">$r</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">getOrigine</span><span style="color:#000;font-weight:bold">());</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$p</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">Point</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">10.52</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">20.13</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$r</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">setOrigine</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$p</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">""</span> <span style="color:#ce5c00;font-weight:bold">.</span> <span style="color:#000">$p</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">""</span> <span style="color:#ce5c00;font-weight:bold">.</span> <span style="color:#000">$r</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">getOrigine</span><span style="color:#000;font-weight:bold">());</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$r</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">setLongueur</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">10</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">10.0</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">$r</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">getLongueur</span><span style="color:#000;font-weight:bold">());</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$r</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">setLargeur</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">20</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">20.0</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">$r</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">getLargeur</span><span style="color:#000;font-weight:bold">());</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">'Rectangle : origine : Point (10.52, 20.13), largeur : 20.00, longueur : 10.00'</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">""</span> <span style="color:#ce5c00;font-weight:bold">.</span> <span style="color:#000">$r</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     * @test
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     * @testdox test calcul de l'aire d'un Rectangle
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">function</span> <span style="color:#000">test_aire_rectangle</span><span style="color:#000;font-weight:bold">()</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$r</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">Rectangle</span><span style="color:#000;font-weight:bold">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$p</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">Point</span><span style="color:#000;font-weight:bold">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$r</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">setOrigine</span><span style="color:#000;font-weight:bold">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">0.0</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">$r</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">aire</span><span style="color:#000;font-weight:bold">());</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$r</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">setLongueur</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">10</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$r</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">setLargeur</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">20</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">200.0</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">$r</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">aire</span><span style="color:#000;font-weight:bold">());</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div>
+</div>
+
+
+
+    </div>
+</div>
+
+<div class="exercice-question">
+    <div class="exercice-question-titre"></div>
+<ol>
+<li>Écrire le code PHP de la classe <code>Rectangle</code> qui sera stockée dans le fichier <code>Rectangle.php</code> avec les attributs <code>longueur</code> et <code>largeur</code>.</li>
+<li>Ajouter le code de la fonction <code>constructeur</code> qui admet un paramètre avec par défaut une origine en <code>(0.0,0.0)</code>.</li>
+<li>Ajouter le code de la fonction  <code>__toString</code>.</li>
+<li>Ajouter le code des fonctions <em>accesseurs</em> pour <code>$largeur</code> et <code>$longueur</code>.</li>
+<li>Ajouter la méthode <code>aire()</code> qui renvoie le résultat du calcul de l’aire du rectangle.</li>
+</ol>
+</div>
+<h5 id="création-de-la-classe-parallelepipede">Création de la classe <code>Parallelepipede</code><a aria-hidden="true" href="https://moodle.univ-artois.fr/pluginfile.php/45514/mod_resource/content/1/public/docs/td_tp/02-td-tp-php-objet/#cr%C3%A9ation-de-la-classe-parallelepipede" style="visibility: hidden;"> <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"></path><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path></svg></a></h5>
+<p>Nous allons créer une classe <code>Parallelepipede</code> qui hérite de la classe <code>Rectangle</code> et qui sera stockée dans le fichier <code>Parallelepipede.php</code> qui contient une propriété <code>$hauteur</code> de type <code>float</code>.</p>
+<div class="exercice-question">
+    <div class="exercice-question-titre"></div>
+<ol>
+<li>Créez un fichier de tests <code>ParallelepipedeTest.php</code>.</li>
+</ol>
+</div>
+<p>La classe <code>Parallelepipede</code> contient :</p>
+<ul>
+<li>Une fonction <em>constructeur</em> avec 4 paramètres <code>$largeur</code> de type <code>float</code> ,<code>$longueur</code> de type <code>float</code>  ,<code>$hauteur</code> de type <code>float</code> et <code>$origine</code> de type <code>Point</code> et qui utilise le constructeur de la classe <code>Rectangle</code>.</li>
+<li>Une fonction <code>__toString</code> qui donne une représentation de l’instance sous forme d’une <code>string</code>.
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Parallelepipede : origine : Point (10.52, 20.13), largeur : 20.00, longueur : 10.00, hauteur : 15.50
+</span></span></code></pre></div></li>
+<li>Les fonctions assesseurs de l’attribut <code>$hauteur</code>.
+Si le paramètre de la fonction <code>setHauteur</code> est null alors la valeur 0.0 est utilisée par défaut.</li>
+<li>Une fonction <code>volume()</code> qui renvoie la valeur du volume du parallélépipède et qui utilise la la fonction <code>aire()</code> de la classe <code>Rectangle</code>.</li>
+</ul>
+<div class="code">
+    <button class="accordeon"> Code des fonctions de test de la classe Parallelepipede  <i class="fas fa-angle-right"></i></button>
+    <div class="panel">
+        
+
+<div class="code-contenu">
+    <h5 class="issue-description-titre">  </h5>
+    <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     * @test
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     * @testdox Déclaration de l'attribut hauteur
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">function</span> <span style="color:#000">test_attributs_x_et_y</span><span style="color:#000;font-weight:bold">()</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertClassHasAttribute</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">'hauteur'</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">Parallelepipede</span><span style="color:#ce5c00;font-weight:bold">::</span><span style="color:#c4a000">class</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     * @test
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     * @testdox Test class Parallelepipede
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">function</span> <span style="color:#000">test_Parallelepipede</span><span style="color:#000;font-weight:bold">()</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$p</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">Parallelepipede</span><span style="color:#000;font-weight:bold">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertInstanceOf</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">Parallelepipede</span><span style="color:#ce5c00;font-weight:bold">::</span><span style="color:#c4a000">class</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">$p</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     * @test
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     * @testdox Test toString Parallélépipède
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">function</span> <span style="color:#000">test_toString_parallelepipede</span><span style="color:#000;font-weight:bold">()</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$p</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">Parallelepipede</span><span style="color:#000;font-weight:bold">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">'Parallelepipede : origine : Point ( 0.00,  0.00), largeur :  0.00, longueur :  0.00, hauteur :  0.00'</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">""</span> <span style="color:#ce5c00;font-weight:bold">.</span> <span style="color:#000">$p</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$p</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">Parallelepipede</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">10</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">20</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">Point</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">10.52</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">20.13</span><span style="color:#000;font-weight:bold">));</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">'Parallelepipede : origine : Point (10.52, 20.13), largeur : 10.00, longueur : 20.00, hauteur :  2.00'</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">""</span> <span style="color:#ce5c00;font-weight:bold">.</span> <span style="color:#000">$p</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     * @test
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     * @testdox Test getXXX Parallélépipède
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">function</span> <span style="color:#000">test_get_parallelepipede</span><span style="color:#000;font-weight:bold">()</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$pa</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">Parallelepipede</span><span style="color:#000;font-weight:bold">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$p</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">Point</span><span style="color:#000;font-weight:bold">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">""</span> <span style="color:#ce5c00;font-weight:bold">.</span> <span style="color:#000">$p</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">""</span> <span style="color:#ce5c00;font-weight:bold">.</span> <span style="color:#000">$pa</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">getOrigine</span><span style="color:#000;font-weight:bold">());</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">0.0</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">""</span> <span style="color:#ce5c00;font-weight:bold">.</span> <span style="color:#000">$pa</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">getLongueur</span><span style="color:#000;font-weight:bold">());</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">0.0</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">""</span> <span style="color:#ce5c00;font-weight:bold">.</span> <span style="color:#000">$pa</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">getLargeur</span><span style="color:#000;font-weight:bold">());</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">0.0</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">""</span> <span style="color:#ce5c00;font-weight:bold">.</span> <span style="color:#000">$pa</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">getHauteur</span><span style="color:#000;font-weight:bold">());</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$p</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">Point</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">10.52</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">20.13</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$pa</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">Parallelepipede</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">20</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">10</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">3</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">$p</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">""</span> <span style="color:#ce5c00;font-weight:bold">.</span> <span style="color:#000">$p</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">""</span> <span style="color:#ce5c00;font-weight:bold">.</span> <span style="color:#000">$pa</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">getOrigine</span><span style="color:#000;font-weight:bold">());</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">10.0</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">""</span> <span style="color:#ce5c00;font-weight:bold">.</span> <span style="color:#000">$pa</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">getLongueur</span><span style="color:#000;font-weight:bold">());</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">20.0</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">""</span> <span style="color:#ce5c00;font-weight:bold">.</span> <span style="color:#000">$pa</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">getLargeur</span><span style="color:#000;font-weight:bold">());</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">3.0</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">""</span> <span style="color:#ce5c00;font-weight:bold">.</span> <span style="color:#000">$pa</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">getHauteur</span><span style="color:#000;font-weight:bold">());</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     * @test
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     * @testdox Test setXXX Parallélépipède
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">function</span> <span style="color:#000">test_set_parallelepipede</span><span style="color:#000;font-weight:bold">()</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$pa</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">Parallelepipede</span><span style="color:#000;font-weight:bold">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$p</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">Point</span><span style="color:#000;font-weight:bold">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$pa</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">setOrigine</span><span style="color:#000;font-weight:bold">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">""</span> <span style="color:#ce5c00;font-weight:bold">.</span> <span style="color:#000">$p</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">""</span> <span style="color:#ce5c00;font-weight:bold">.</span> <span style="color:#000">$pa</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">getOrigine</span><span style="color:#000;font-weight:bold">());</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$p</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">Point</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">10.52</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">20.13</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$pa</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">setOrigine</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$p</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">""</span> <span style="color:#ce5c00;font-weight:bold">.</span> <span style="color:#000">$p</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">""</span> <span style="color:#ce5c00;font-weight:bold">.</span> <span style="color:#000">$pa</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">getOrigine</span><span style="color:#000;font-weight:bold">());</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$pa</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">setLongueur</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">10</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">10.0</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">$pa</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">getLongueur</span><span style="color:#000;font-weight:bold">());</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$pa</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">setLargeur</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">20</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">20.0</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">$pa</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">getLargeur</span><span style="color:#000;font-weight:bold">());</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$pa</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">setHauteur</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">15.5</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">15.5</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">$pa</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">getHauteur</span><span style="color:#000;font-weight:bold">());</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">'Parallelepipede : origine : Point (10.52, 20.13), largeur : 20.00, longueur : 10.00, hauteur : 15.50'</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">""</span> <span style="color:#ce5c00;font-weight:bold">.</span> <span style="color:#000">$pa</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     * @test
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     * @testdox Test calcul du volume d'un parallélépipède
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">function</span> <span style="color:#000">test_volume_parallelepipede</span><span style="color:#000;font-weight:bold">()</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$r</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">Parallelepipede</span><span style="color:#000;font-weight:bold">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$p</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">Point</span><span style="color:#000;font-weight:bold">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$r</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">setOrigine</span><span style="color:#000;font-weight:bold">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">0.0</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">$r</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">volume</span><span style="color:#000;font-weight:bold">());</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$r</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">setLongueur</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">10</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$r</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">setLargeur</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">20</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$r</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">setHauteur</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">200.0</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">$r</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">volume</span><span style="color:#000;font-weight:bold">());</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div>
+</div>
+
+
+
+    </div>
+</div>
+
+<div class="exercice-question">
+    <div class="exercice-question-titre"></div>
+<ol>
+<li>Écrire le code PHP de la classe <code>Parallelepipede</code> qui sera stockée dans le fichier <code>Parallelepipede.php</code> avec l’attribut <code>$hauteur</code>.</li>
+<li>Ajouter le code de la fonction <code>constructeur</code> qui admet 4 paramètres.</li>
+<li>Ajouter le code de la fonction  <code>__toString</code>.</li>
+<li>Ajouter le code des fonctions <em>accesseurs</em> pour <code>$hauteur</code>.</li>
+<li>Ajouter la méthode <code>volume()</code> qui renvoie le résultat du calcul du volume d’un parallélépipède.</li>
+</ol>
+</div>
+<h3 id="création-dune-interface-drawable">Création d’une interface <code>Drawable</code><a aria-hidden="true" href="https://moodle.univ-artois.fr/pluginfile.php/45514/mod_resource/content/1/public/docs/td_tp/02-td-tp-php-objet/#cr%C3%A9ation-dune-interface-drawable" style="visibility: hidden;"> <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"></path><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path></svg></a></h3>
+<p>Imaginons que nous voulions que les objets instances de la classe
+<code>Figure</code> et ses descendants aient la capacité de se dessiner. La
+solution pour garantir cela est de définir une interface qui contient la
+méthode <code>dessine()</code>.</p>
+<div class="exercice">
+    <div class="exercice-titre">  </div>
+<div class="exercice-enonce">
+    <p>Nous allons modifier la classe <code>Figure</code> qui va implémenter l’interface <code>Drawable</code>.</p>
+</div>
+</div>
+<div class="exercice-question">
+    <div class="exercice-question-titre"></div>
+<ol>
+<li>Créez l’interface <code>Drawable</code> dans le fichier <code>Drawable.php</code> qui contient la déclaration de la méthode <code>dessine()</code> qui renvoie une <code>string</code>.</li>
+<li>Créez un fichier de tests <code>DrawableTest.php</code> dans le fichier <code>DrawableTest.php</code>.</li>
+<li>Modifier le code de la classe <code>Figure</code> pour qu’elle implémente l’interface <code>Drawable</code>.</li>
+</ol>
+</div>
+<div class="code">
+    <button class="accordeon"> Code des fonctions de test de l'interface Drawable <i class="fas fa-angle-right"></i></button>
+    <div class="panel">
+        
+
+<div class="code-contenu">
+    <h5 class="issue-description-titre">  </h5>
+    <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     * @test
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     * @testdox Test interface Drawable
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">function</span> <span style="color:#000">test_dessine</span><span style="color:#000;font-weight:bold">()</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$f</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">Figure</span><span style="color:#000;font-weight:bold">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">'dessine Figure : origine : Point ( 0.00,  0.00)'</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">$f</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">dessine</span><span style="color:#000;font-weight:bold">());</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$r</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">Rectangle</span><span style="color:#000;font-weight:bold">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">'dessine Rectangle : origine : Point ( 0.00,  0.00), largeur :  0.00, longueur :  0.00'</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">$r</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">dessine</span><span style="color:#000;font-weight:bold">());</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$p</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">Parallelepipede</span><span style="color:#000;font-weight:bold">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">'dessine Parallelepipede : origine : Point ( 0.00,  0.00), largeur :  0.00, longueur :  0.00, hauteur :  0.00'</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">$p</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">dessine</span><span style="color:#000;font-weight:bold">());</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div>
+</div>
+
+
+
+    </div>
+</div>
+
+<p>Pour passer le test, la fonction <code>dessine()</code> renvoie une <code>string</code> qui devra être équivalent à</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>dessine Parallelepipede : origine : Point ( 0.00,  0.00), longueur :  0.00, largeur :  0.00, hauteur :  0.00
+</span></span></code></pre></div><p>pour le parallélépipède (la <code>string</code> <code>dessine</code> et la fonction <code>toString()</code> de la classe).</p>
+<h3 id="la-classe-employé-et-ses-dérivées">La classe Employé et ses dérivées<a aria-hidden="true" href="https://moodle.univ-artois.fr/pluginfile.php/45514/mod_resource/content/1/public/docs/td_tp/02-td-tp-php-objet/#la-classe-employ%C3%A9-et-ses-d%C3%A9riv%C3%A9es" style="visibility: hidden;"> <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"></path><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path></svg></a></h3>
+<div class="exercice">
+    <div class="exercice-titre">  </div>
+<div class="exercice-enonce">
+    <p>Nous allons créer des classes qui héritent d’une classe abstraite et qui surchargent certaines méthodes héritées.</p>
+</div>
+</div>
+<p>Voici le diagramme qui représente la classe abstraite <code>Employe</code>.</p>
+<img src="./tp_files/JOv13iCW30JlUOMFpIzowKCeM8abR11i3X7YxoLKaUgBjJjQhxSALt1gN6ZC8O69DUCYPHmfJDTzAehp81zThVJM7DF5r2Pium34Tn83sQc3Jl-MyikFjDXEblHVviAFqvw6JcC9MDdmMYVhoyOMxWU_"><p>Comme dans les sections précédentes, nous allons définir des tests unitaires pour construire notre classe en construction.
+Comme ici nous avons à tester une classe abstraite, nous allons vérifier la présence des attributs indiqués dans le diagramme de classes.</p>
+<p>La classe <code>Employe</code> contient une variable de classe (static) <code>numEmp</code> (qui va indiquer le nombre d’employés déjà crées) privée.
+Elle contient les attributs <code>$nom</code> et <code>$prenom</code> et <code>$id</code> qui sont <em>protected</em>.</p>
+<div class="exercice-question">
+    <div class="exercice-question-titre"></div>
+<ol>
+<li>Créez un fichier de tests <code>EmployeTest.php</code>.</li>
+</ol>
+</div>
+<div class="code">
+    <button class="accordeon"> Code des fonctions de test de la classe Employe <i class="fas fa-angle-right"></i></button>
+    <div class="panel">
+        
+
+<div class="code-contenu">
+    <h5 class="issue-description-titre">  </h5>
+    <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     * @test
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     * @testdox Déclaration des attributs nom prenom id et numEmp dans la classe Employe
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">function</span> <span style="color:#000">test_attributs_Employe</span><span style="color:#000;font-weight:bold">()</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertClassHasAttribute</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">'nom'</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">Employe</span><span style="color:#ce5c00;font-weight:bold">::</span><span style="color:#c4a000">class</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertClassHasAttribute</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">'prenom'</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">Employe</span><span style="color:#ce5c00;font-weight:bold">::</span><span style="color:#c4a000">class</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertClassHasAttribute</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">'id'</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">Employe</span><span style="color:#ce5c00;font-weight:bold">::</span><span style="color:#c4a000">class</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertClassHasStaticAttribute</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">'numEmp'</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">Employe</span><span style="color:#ce5c00;font-weight:bold">::</span><span style="color:#c4a000">class</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div>
+</div>
+
+
+
+    </div>
+</div>
+
+<div class="exercice-question">
+    <div class="exercice-question-titre"></div>
+<ol>
+<li>Créez un fichier de tests <code>Employe.php</code>.</li>
+<li>Ajoutez la méthode abstraite <code>traitement()</code> dans la classe <code>Employe.php</code>, elle sera utilisée pour calculer la paye d’un employé.</li>
+<li>Ajoutez la méthode constructeur de la classe <code>Employe.php</code> avec 2 paramètres (<code>$nom</code> et <code>$prenom</code>).
+Ce constructeur affecte un numéro d’employé (<code>$id</code>) à partir de la variable de classe
+<code>$numEmp</code> qui sera incrémentée à chaque création d’un nouvel employé.</li>
+<li>Écrire le code de la fonction <code>__toString()</code> (renvoie l’<code>id</code>, le <code>nom</code>, le <code>prenom</code> et le traitement).
+Pour passer le test, dans les classes qui hériteront de la classe <code>Employe.php</code>, le retour de la fonction devra être équivalent à
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span> id: 4, Robert Duchmol, traitement: 2123.50 &lt;-- format float sur 7 caractères
+</span></span></code></pre></div></li>
+<li>les fonctions <em>assesseurs</em> des propriétés (attention on ne peut pas modifier le numéro <code>$id</code> de l’employé, ni la variable de classe <code>$numEmp</code>) de la
+classe.</li>
+<li>Ajoutez le code de la fonction <code>__clone()</code>, elle devra garantir que chaque employé à un numéro différent.</li>
+</ol>
+</div>
+
+
+<div class="alert alert-warning" role="alert">
+<h4 class="alert-heading">Attention</h4>
+
+    <p>Un attribut de classe est un attribut déclaré <em>statique</em>.
+Un attribut de classe existe dans la classe, et il est accessible par les instances de la classe dans laquelle il est déclaré.
+Cela signifie que l’attribut n’existe qu’en un seul exemplaire quel que soit le nombre d’instances.
+Si l’attribut vaut 18 par exemple, l’ensemble des instances de la classe récupérera cette valeur.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">Foo</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#204a87;font-weight:bold">static</span> <span style="color:#000">$numEmp</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">18</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>   <span style="color:#8f5902;font-style:italic">// utilisation de l'attribut dans une fonction de la classe
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span>   <span style="color:#204a87;font-weight:bold">function</span> <span style="color:#000">foo</span><span style="color:#000;font-weight:bold">()</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#8f5902;font-style:italic">// ...
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span>     <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">Foo</span><span style="color:#ce5c00;font-weight:bold">::</span><span style="color:#000">$numEmp</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#0000cf;font-weight:bold">10</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#8f5902;font-style:italic">// ou return self::$numEmp + 10;
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span>   <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div>
+
+</div>
+
+<h5 id="création-de-la-classe-patron">Création de la classe <code>Patron</code><a aria-hidden="true" href="https://moodle.univ-artois.fr/pluginfile.php/45514/mod_resource/content/1/public/docs/td_tp/02-td-tp-php-objet/#cr%C3%A9ation-de-la-classe-patron" style="visibility: hidden;"> <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"></path><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path></svg></a></h5>
+<p>Nous allons maintenant créer la classe <code>Patron</code> qui hérite de la classe <code>Employe</code> et qui contient l’attribut privé <code>$salaire</code> de type <code>float</code>.</p>
+<p>Plusieurs des fonctions que vous avez écrites dans la classe <code>Employe</code> seront testées ici.</p>
+<div class="exercice-question">
+    <div class="exercice-question-titre"></div>
+<ol>
+<li>Créez un fichier de tests <code>PatronTest.php</code>.</li>
+</ol>
+</div>
+<p>La classe <code>Patron</code> contient :</p>
+<ul>
+<li>Une fonction <em>constructeur</em>(qui utilise le constructeur père) avec 3 paramètres <code>$nom</code> <code>$prenom</code> de type string et <code>$salaire</code> de type <code>float</code>.</li>
+<li>Une fonction <code>__toString</code> qui donne une représentation de l’instance sous forme d’une <code>string</code> (même chose que pour un employé).</li>
+<li>Les fonctions assesseurs de l’attribut <code>$salaire</code>.</li>
+<li>La methode <code>traitement()</code>, pour le patron le traitement correspond à son salaire.</li>
+</ul>
+<div class="code">
+    <button class="accordeon"> Code des fonctions de test de la classe Patron <i class="fas fa-angle-right"></i></button>
+    <div class="panel">
+        
+
+<div class="code-contenu">
+    <h5 class="issue-description-titre">  </h5>
+    <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     * @test
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     * @testdox Déclaration des attributs classe Patron
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">function</span> <span style="color:#000">test_attributs_Patron</span><span style="color:#000;font-weight:bold">()</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertClassHasAttribute</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">'salaire'</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">Patron</span><span style="color:#ce5c00;font-weight:bold">::</span><span style="color:#c4a000">class</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertClassHasAttribute</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">'nom'</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">Patron</span><span style="color:#ce5c00;font-weight:bold">::</span><span style="color:#c4a000">class</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertClassHasAttribute</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">'prenom'</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">Patron</span><span style="color:#ce5c00;font-weight:bold">::</span><span style="color:#c4a000">class</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     * @test
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     * @testdox Création d'un patron
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">function</span> <span style="color:#000">test_creation_Patron</span><span style="color:#000;font-weight:bold">()</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$p</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">Patron</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">'Duchmol'</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">'Robert'</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">4378.89</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertInstanceOf</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">Patron</span><span style="color:#ce5c00;font-weight:bold">::</span><span style="color:#c4a000">class</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">$p</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     * @test
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     * @testdox Traitement d'un patron
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">function</span> <span style="color:#000">test_traitement_Patron</span><span style="color:#000;font-weight:bold">()</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$p</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">Patron</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">'Duchmol'</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">'Robert'</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">4378.89</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">4378.89</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">$p</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">traitement</span><span style="color:#000;font-weight:bold">());</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     * @test
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     * @testdox Clone d'un patron
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">function</span> <span style="color:#000">test_clone_Patron</span><span style="color:#000;font-weight:bold">()</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$p</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">Patron</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">'Duchmol'</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">'Robert'</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">4378.89</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$p1</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">clone</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$p</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertInstanceOf</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">Patron</span><span style="color:#ce5c00;font-weight:bold">::</span><span style="color:#c4a000">class</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">$p1</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$p</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">getNom</span><span style="color:#000;font-weight:bold">(),</span> <span style="color:#000">$p1</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">getNom</span><span style="color:#000;font-weight:bold">());</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$p</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">getPrenom</span><span style="color:#000;font-weight:bold">(),</span> <span style="color:#000">$p1</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">getPrenom</span><span style="color:#000;font-weight:bold">());</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertNotEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$p</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">getId</span><span style="color:#000;font-weight:bold">(),</span> <span style="color:#000">$p1</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">getId</span><span style="color:#000;font-weight:bold">());</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     * @test
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     * @testdox Affichage d'un patron
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">function</span> <span style="color:#000">test_toString_Patron</span><span style="color:#000;font-weight:bold">()</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$p</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">Patron</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">'Duchmol'</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">'Robert'</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">4378.89</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$str</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">sprintf</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">"id: %d, %s %s, traitement: %7.2f"</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">$p</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">getNumEmp</span><span style="color:#000;font-weight:bold">()</span><span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">),</span> <span style="color:#000">$p</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">getPrenom</span><span style="color:#000;font-weight:bold">(),</span> <span style="color:#000">$p</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">getNom</span><span style="color:#000;font-weight:bold">(),</span> <span style="color:#000">$p</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">traitement</span><span style="color:#000;font-weight:bold">());</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$str</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">$p</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div>
+</div>
+
+
+
+    </div>
+</div>
+
+<div class="exercice-question">
+    <div class="exercice-question-titre"></div>
+<ol>
+<li>Créez la classe <code>Patron</code> qui hérite de la classe <code>Employe</code>.</li>
+<li>Ajouter le constructeur (qui utilise le constructeur père),</li>
+<li>Ajouter les méthodes <em>accesseurs</em> pour un accès aux propriétés de la classe.</li>
+<li>Faut-il surcharger la méthode <code>__clone()</code> ?</li>
+<li>Faut-il surcharger la méthode <code>__toString()</code> ?</li>
+</ol>
+</div>
+<h5 id="création-de-la-classe-travailleurcom">Création de la classe <code>TravailleurCom</code><a aria-hidden="true" href="https://moodle.univ-artois.fr/pluginfile.php/45514/mod_resource/content/1/public/docs/td_tp/02-td-tp-php-objet/#cr%C3%A9ation-de-la-classe-travailleurcom" style="visibility: hidden;"> <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"></path><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path></svg></a></h5>
+<p>La classe <code>TravailleurCom</code> hérite de la classe <code>Employe</code> et contient les propriétés</p>
+<ul>
+<li><code>salaire</code>,</li>
+<li><code>commission</code> (par produit vendu), et</li>
+<li><code>quantite</code> (nombre de produits vendus)</li>
+</ul>
+<div class="exercice-question">
+    <div class="exercice-question-titre"></div>
+<ol>
+<li>Créez un fichier de tests <code>TravailleurComTest.php</code>.</li>
+</ol>
+</div>
+<p>La classe <code>TravailleurCom</code> contient</p>
+<ul>
+<li>une fonction constructeur (qui utilise le constructeur père) avec les paramètres qui conviennent,</li>
+<li>les méthodes <em>accesseurs</em> pour un accès aux propriétés de la classe.</li>
+<li>la fonction <code>traitement()</code> qui renvoie la somme du salaire et du produit de la commission par la quantité de produit.</li>
+</ul>
+<div class="code">
+    <button class="accordeon"> Code des fonctions de test de la classe TravailleurCom <i class="fas fa-angle-right"></i></button>
+    <div class="panel">
+        
+
+<div class="code-contenu">
+    <h5 class="issue-description-titre">  </h5>
+    <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     * @test
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     * @testdox Déclaration des attributs classe TravailleurCom
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">function</span> <span style="color:#000">test_attributs_TravailleurCom</span><span style="color:#000;font-weight:bold">()</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertClassHasAttribute</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">'salaire'</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">TravailleurCom</span><span style="color:#ce5c00;font-weight:bold">::</span><span style="color:#c4a000">class</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertClassHasAttribute</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">'commission'</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">TravailleurCom</span><span style="color:#ce5c00;font-weight:bold">::</span><span style="color:#c4a000">class</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertClassHasAttribute</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">'quantite'</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">TravailleurCom</span><span style="color:#ce5c00;font-weight:bold">::</span><span style="color:#c4a000">class</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertClassHasAttribute</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">'nom'</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">TravailleurCom</span><span style="color:#ce5c00;font-weight:bold">::</span><span style="color:#c4a000">class</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertClassHasAttribute</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">'prenom'</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">TravailleurCom</span><span style="color:#ce5c00;font-weight:bold">::</span><span style="color:#c4a000">class</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     * @test
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     * @testdox Traitement d'un TravailleurCom
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">function</span> <span style="color:#000">test_traitement_TravailleurCom</span><span style="color:#000;font-weight:bold">()</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$p</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">TravailleurCom</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">'Duchmol'</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">'Robert'</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">2000.00</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$p</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">setCommission</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">5.25</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$p</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">setQuantite</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">10</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">2052.5</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">$p</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">traitement</span><span style="color:#000;font-weight:bold">());</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     * @test
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     * @testdox Affichage d'un TravailleurCom
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">function</span> <span style="color:#000">test_toString_TravailleurCom</span><span style="color:#000;font-weight:bold">()</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$p</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">TravailleurCom</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">'Duchmol'</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">'Robert'</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">2000.00</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$p</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">setCommission</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">5.25</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$p</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">setQuantite</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">10</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$str</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">sprintf</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">"id: %d, %s %s, traitement: %7.2f"</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">$p</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">getNumEmp</span><span style="color:#000;font-weight:bold">()</span><span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">),</span> <span style="color:#000">$p</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">getPrenom</span><span style="color:#000;font-weight:bold">(),</span> <span style="color:#000">$p</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">getNom</span><span style="color:#000;font-weight:bold">(),</span> <span style="color:#000">$p</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">traitement</span><span style="color:#000;font-weight:bold">());</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$str</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">$p</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     * @test
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     * @testdox Clone d'un TravailleurCom
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">function</span> <span style="color:#000">test_clone_TravailleurCom</span><span style="color:#000;font-weight:bold">()</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$p</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">TravailleurCom</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">'Duchmol'</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">'Robert'</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$p</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">setCommission</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">5.25</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$p</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">setQuantite</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">10</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$p</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">setSalaire</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">1000</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$p1</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">clone</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$p</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$p</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">setSalaire</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">2000</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertInstanceOf</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">TravailleurCom</span><span style="color:#ce5c00;font-weight:bold">::</span><span style="color:#c4a000">class</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">$p1</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$p</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">getNom</span><span style="color:#000;font-weight:bold">(),</span> <span style="color:#000">$p1</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">getNom</span><span style="color:#000;font-weight:bold">());</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$p</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">getPrenom</span><span style="color:#000;font-weight:bold">(),</span> <span style="color:#000">$p1</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">getPrenom</span><span style="color:#000;font-weight:bold">());</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertNotEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$p</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">getId</span><span style="color:#000;font-weight:bold">(),</span> <span style="color:#000">$p1</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">getId</span><span style="color:#000;font-weight:bold">());</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#8f5902;font-style:italic">// erreur identifiée si la valeur de $p-&gt;traitement() n’est pas plus élevée que la valeur de $p1-&gt;traitement().
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertGreaterThan</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$p1</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">traitement</span><span style="color:#000;font-weight:bold">(),</span> <span style="color:#000">$p</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">traitement</span><span style="color:#000;font-weight:bold">());</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div>
+</div>
+
+
+
+    </div>
+</div>
+
+<div class="exercice-question">
+    <div class="exercice-question-titre"></div>
+<ol>
+<li>Créez la classe <code>TravailleurCom</code> qui hérite de la classe <code>Employe</code>.</li>
+<li>Ajouter le constructeur (qui utilise le constructeur père) avec les paramètres qui conviennent,</li>
+<li>Ajouter les méthodes <em>accesseurs</em> pour un accès aux propriétés de la classe.</li>
+<li>Surchargez la méthode traitement() pour qu’elle renvoie le bon résultat.</li>
+</ol>
+</div>
+<h5 id="création-de-la-classe-travailleurhoraire">Création de la classe <code>TravailleurHoraire</code><a aria-hidden="true" href="https://moodle.univ-artois.fr/pluginfile.php/45514/mod_resource/content/1/public/docs/td_tp/02-td-tp-php-objet/#cr%C3%A9ation-de-la-classe-travailleurhoraire" style="visibility: hidden;"> <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"></path><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path></svg></a></h5>
+<p>La classe <code>TravailleurHoraire</code> hérite de la classe <code>Employe</code> et contient les propriétés</p>
+<ul>
+<li><code>salaire</code>,</li>
+<li><code>taux</code> (taux horaire), et</li>
+<li><code>quantite</code> (nombre d’heures travaillées dans le mois)</li>
+</ul>
+<div class="exercice-question">
+    <div class="exercice-question-titre"></div>
+<ol>
+<li>Créez un fichier de tests <code>TravailleurHoraireTest.php</code>.</li>
+</ol>
+</div>
+<p>La classe <code>TravailleurHoraire</code> contient</p>
+<ul>
+<li>une fonction constructeur (qui utilise le constructeur père) avec les paramètres qui conviennent,</li>
+<li>les méthodes <em>accesseurs</em> pour un accès aux propriétés de la classe.</li>
+<li>la fonction <code>traitement()</code> qui renvoie la somme du salaire et du produit du taux horaire par la quantité d’heures travaillées.</li>
+</ul>
+<div class="code">
+    <button class="accordeon"> Code des fonctions de test de la classe TravailleurHoraire <i class="fas fa-angle-right"></i></button>
+    <div class="panel">
+        
+
+<div class="code-contenu">
+    <h5 class="issue-description-titre">  </h5>
+    <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     * @test
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     * @testdox Déclaration des attributs classe TravailleurHoraire
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     */</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">function</span> <span style="color:#000">test_attributs_TravailleurHoraire</span><span style="color:#000;font-weight:bold">()</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertClassHasAttribute</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">'salaire'</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">TravailleurHoraire</span><span style="color:#ce5c00;font-weight:bold">::</span><span style="color:#c4a000">class</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertClassHasAttribute</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">'taux'</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">TravailleurHoraire</span><span style="color:#ce5c00;font-weight:bold">::</span><span style="color:#c4a000">class</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertClassHasAttribute</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">'quantite'</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">TravailleurHoraire</span><span style="color:#ce5c00;font-weight:bold">::</span><span style="color:#c4a000">class</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertClassHasAttribute</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">'nom'</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">TravailleurHoraire</span><span style="color:#ce5c00;font-weight:bold">::</span><span style="color:#c4a000">class</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertClassHasAttribute</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">'prenom'</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">TravailleurHoraire</span><span style="color:#ce5c00;font-weight:bold">::</span><span style="color:#c4a000">class</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     * @test
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     * @testdox Traitement d'un TravailleurHoraire
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">function</span> <span style="color:#000">test_traitement_TravailleurHoraire</span><span style="color:#000;font-weight:bold">()</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$p</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">TravailleurHoraire</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">'Duchmol'</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">'Robert'</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">2000.00</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$p</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">setTaux</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">9.75</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$p</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">setQuantite</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">10</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertEquals</span><span style="color:#000;font-weight:bold">(</span> <span style="color:#0000cf;font-weight:bold">2097.5</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">$p</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">traitement</span><span style="color:#000;font-weight:bold">());</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     * @test
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     * @testdox Affichage d'un TravailleurHoraire
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">function</span> <span style="color:#000">test_toString_TravailleurHoraire</span><span style="color:#000;font-weight:bold">()</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$p</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">TravailleurHoraire</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">'Duchmol'</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">'Robert'</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">2000.00</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$p</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">setTaux</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">9.75</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$p</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">setQuantite</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">10</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$str</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">sprintf</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">"id: %d, %s %s, traitement: %7.2f"</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">$p</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">getNumEmp</span><span style="color:#000;font-weight:bold">()</span><span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">),</span> <span style="color:#000">$p</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">getPrenom</span><span style="color:#000;font-weight:bold">(),</span> <span style="color:#000">$p</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">getNom</span><span style="color:#000;font-weight:bold">(),</span> <span style="color:#000">$p</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">traitement</span><span style="color:#000;font-weight:bold">());</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$str</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">$p</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     * @test
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     * @testdox Clone d'un TravailleurHoraire
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">     */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">function</span> <span style="color:#000">test_clone_TravailleurCom</span><span style="color:#000;font-weight:bold">()</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$p</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">TravailleurHoraire</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">'Duchmol'</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">'Robert'</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$p</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">setTaux</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">5.25</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$p</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">setQuantite</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">10</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$p</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">setSalaire</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">1000</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$p1</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">clone</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$p</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$p</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">setSalaire</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">2000</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertInstanceOf</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">TravailleurHoraire</span><span style="color:#ce5c00;font-weight:bold">::</span><span style="color:#c4a000">class</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">$p1</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$p</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">getNom</span><span style="color:#000;font-weight:bold">(),</span> <span style="color:#000">$p1</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">getNom</span><span style="color:#000;font-weight:bold">());</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$p</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">getPrenom</span><span style="color:#000;font-weight:bold">(),</span> <span style="color:#000">$p1</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">getPrenom</span><span style="color:#000;font-weight:bold">());</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertNotEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$p</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">getId</span><span style="color:#000;font-weight:bold">(),</span> <span style="color:#000">$p1</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">getId</span><span style="color:#000;font-weight:bold">());</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#8f5902;font-style:italic">// erreur identifiée si la valeur de $p-&gt;traitement() n’est pas plus élevée que la valeur de $p1-&gt;traitement().
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span>        <span style="color:#000">$this</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">assertGreaterThan</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$p1</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">traitement</span><span style="color:#000;font-weight:bold">(),</span> <span style="color:#000">$p</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">traitement</span><span style="color:#000;font-weight:bold">());</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div>
+</div>
+
+
+
+    </div>
+</div>
+
+<div class="exercice-question">
+    <div class="exercice-question-titre"></div>
+<ol>
+<li>Créez la classe <code>TravailleurHoraire</code> qui hérite de la classe <code>Employe</code>.</li>
+<li>Ajouter le constructeur (qui utilise le constructeur père) avec les paramètres qui conviennent,</li>
+<li>Ajouter les méthodes <em>accesseurs</em> pour un accès aux propriétés de la classe.</li>
+<li>Surchargez la méthode traitement() pour qu’elle renvoie le bon résultat.</li>
+</ol>
+</div>
+
+  <div class="section-index">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</div>
+</div>
+
+          </main>
+        </div>
+      </div>
+      <footer class="td-footer row d-print-none">
+  <div class="container-fluid">
+    <div class="row mx-md-2">
+      <div class="col-6 col-sm-4 text-xs-center order-sm-2">
+        
+      </div>
+      <div class="col-6 col-sm-4 text-end text-xs-center order-sm-3">
+        
+      </div>
+      <div class="td-footer__copyright-etc col-12 col-sm-4 text-center py-2 order-sm-2">
+        <span>© 2023 IUT Lens All Rights Reserved</span>
+        <span class="ms-1"><a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener">Privacy Policy</a></span>
+        
+      </div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script src="./tp_files/popper.min.js.téléchargement" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="./tp_files/bootstrap.min.js.téléchargement" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+<script src="./tp_files/supports.js.téléchargement" defer=""></script>
+
+<script src="./tp_files/mermaid.min.js.téléchargement" integrity="sha384-m8Pdaep6Qk8sW3J6XhPOiwUww3maU9HxZTLvEfSEB4e1UVvTdHyfJsYmEfYqvwLC" crossorigin="anonymous"></script>
+
+
+
+
+<script src="./tp_files/tabpane-persist.js.téléchargement"></script>
+
+
+
+<script src="./tp_files/deflate.js.téléchargement"></script>
+
+
+
+
+<link rel="stylesheet" href="./tp_files/katex.min.css" integrity="sha384-Cqd8ihRLum0CCg8rz0hYKPoLZ3uw+gES2rXQXycqnL5pgVQIflxAUDS7ZSjITLb5" crossorigin="anonymous">
+
+<script defer="" src="./tp_files/katex.min.js.téléchargement" integrity="sha384-1Or6BdeNQb0ezrmtGeqQHFpppNd7a/gw29xeiSikBbsb44xu3uAo8c7FwbF5jhbd" crossorigin="anonymous"></script>
+
+
+
+<script defer="" src="./tp_files/auto-render.min.js.téléchargement" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body, null);"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="./tp_files/main.min.3b5df369503f8a9423de184c1c5295b57a13355ddc51bb56b7cb987a416afc33.js.téléchargement" integrity="sha256-O13zaVA/ipQj3hhMHFKVtXoTNV3cUbtWt8uYekFq/DM=" crossorigin="anonymous"></script>
+
+
+
+
+  
+</body></html>
